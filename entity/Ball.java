@@ -1,5 +1,7 @@
 package by.milavitsky.homework.task2.entity;
 
+import by.milavitsky.homework.task2.color.Color;
+
 import java.io.Serializable;
 import java.util.Objects;
 

@@ -1,10 +1,10 @@
 package by.milavitsky.homework.task2.entity;
 
+import by.milavitsky.homework.task2.color.Color;
 import by.milavitsky.homework.task2.exception.IncorrectValueException;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Comparator;
 
 public class Basket implements Serializable {
     private final ArrayList<Ball> arrayBasket = new ArrayList<Ball>(); // если будем помещать только мячи

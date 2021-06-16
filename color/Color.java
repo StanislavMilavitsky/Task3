@@ -1,4 +1,4 @@
-package by.milavitsky.homework.task2.entity;
+package by.milavitsky.homework.task2.color;
 
 
 public enum Color {
