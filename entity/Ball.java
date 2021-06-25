@@ -1,7 +1,5 @@
 package by.milavitsky.homework.task2.entity;
 
-import by.milavitsky.homework.task2.color.Color;
-
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -43,9 +41,6 @@ public class Ball implements Serializable {
         Ball ball = (Ball) o;
         if (weight != ball.weight) {
             return false;
-        }
-        if (color == null) {
-            return (color == ball.color);
         } else {
             return color.equals(ball.color);
         }
@@ -53,7 +48,7 @@ public class Ball implements Serializable {
 
     @Override
     public int hashCode() {
-        return (int) (31 * weight + ((color == null) ? 0 : color.hashCode()));
+        return (int) (31 * weight + color.hashCode());
     }
 
     @Override
@@ -70,5 +65,13 @@ public class Ball implements Serializable {
 
     Color getColor() {
         return this.color;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
     }
 }

@@ -1,6 +1,5 @@
 package by.milavitsky.homework.task2.entity;
 
-import by.milavitsky.homework.task2.color.Color;
 import by.milavitsky.homework.task2.exception.IncorrectValueException;
 
 import java.io.Serializable;
@@ -10,9 +9,7 @@ public class Basket implements Serializable {
     private final ArrayList<Ball> arrayBasket = new ArrayList<Ball>(); // если будем помещать только мячи
     private Ball ball;
 
-    public Basket() {
-
-    }
+    public Basket() { }
 
     public void addInBasket(Ball ball) {
         arrayBasket.add(ball);
@@ -41,7 +38,7 @@ public class Basket implements Serializable {
         }
     }
 
-    public double getWeightOfAllBalls() {
+    public double receiveWeightOfAllBalls() {
         double weight = 0;
         for (Ball ball : arrayBasket) {
             weight = weight + ball.getWeight();
@@ -49,7 +46,7 @@ public class Basket implements Serializable {
         return weight;
     }
 
-    public int getNumberBallsColor(Color color) { // как назвать не знаю
+    public int receiveNumberBallsColor(Color color) {
         int flag = 0;
         for (Ball ball : arrayBasket) {
             if (color == ball.getColor()) {
@@ -102,6 +99,22 @@ public class Basket implements Serializable {
 
     public ArrayList<Ball> getAllBall() {
         return new ArrayList<Ball>(arrayBasket);
+    }
+
+    public void setBall(Ball ball, Color color, int weight) {
+        arrayBasket.add(ball);
+        ball.setColor(color);
+        ball.setWeight(weight);
+    }
+
+    public void setBall(Ball ball, Color color) {
+        arrayBasket.add(ball);
+        ball.setColor(color);
+    }
+
+    public void setBall(Ball ball, int weight) {
+        arrayBasket.add(ball);
+        ball.setWeight(weight);
     }
 
 
